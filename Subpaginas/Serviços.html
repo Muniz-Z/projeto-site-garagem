@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/serviços.css">
+    <title>Serviços</title>
+</head>
+
+<body>
+    <header class="Menu-principal">
+        <div class="header-1">
+            <div class="logo"><img src="/Imagens/Logo.png" /></div>
+            <div class="Redes-Sociais">
+                <ul>
+                    <li><a href="https://www.facebook.com/garagen.porecatu" target="_blank"><img
+                                src="/Imagens/facebook.1024x1018.png" height="25px"></a>
+                    </li>
+                    <li><a href="" target="_blank"><img src="/Imagens/whats.png" height="25px"></a></li>
+                    <li><a href="https://www.instagram.com/porecatu_garage/" target="_blank"><img
+                                src="/Imagens/Insta.png" height="25px"></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="divider"></div>
+    <nav class="col-100 menu-urls">
+        <div class="header-2">
+            <div class="menu">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Subpaginas/Quem_Somos.html">Quem
+                            Somos</a></li>
+                    <li><a href="/Subpaginas/Serviços.html">Serviços</a>
+                    </li>
+                    <li><a href="/Subpaginas/Dúvidas.html">Dúvidas</a>
+                    </li>
+                    <li><a href="/Subpaginas/Fale_Conosco.html">Fale
+                            Conosco</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="busca">
+            <input placeholder="Buscar" type="text" />
+        </div>
+    </nav>
+    <main>
+        <div class="Serviços_gerais">
+            <h1>Serviços</h1>
+            <li>
+                <h2>Financiamento</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo itaque, quia minima quaerat id, obcaecati
+                    veritatis aperiam dolores odit voluptas voluptatum. Deleniti, maxime id. Assumenda cupiditate quasi
+                    officiis corrupti nihil?</p>
+            </li>
+            <li>
+                <h2>Compra</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus ab aspernatur maxime aperiam
+                    reiciendis qui commodi porro ducimus recusandae consequatur laudantium placeat eius cumque itaque,
+                    perferendis suscipit ea voluptas reprehenderit!</p>
+            </li>
+            <li>
+                <h2>Vendas</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem impedit, perferendis cumque dicta
+                    sapiente voluptatibus necessitatibus adipisci in eaque, maxime nemo fugit? Doloribus numquam enim quis
+                    aliquam? Cum, reiciendis aliquid.</p>
+            </li>
+            <li>
+                <h2>Trocas</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis temporibus, rerum repudiandae praesentium
+                    aperiam modi expedita, voluptatum sequi corrupti mollitia excepturi nobis delectus numquam quam
+                    assumenda! Nobis maxime qui eius.</p>
+            </li>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Obtém o caminho da URL atual
+                var currentPath = window.location.pathname;
+
+                // Obtém todos os links do menu
+                var menuItems = document.querySelectorAll('.menu a');
+
+                // Itera sobre os links do menu
+                menuItems.forEach(function (menuItem) {
+                    // Cria um link temporário para comparar apenas o pathname
+                    var tempLink = document.createElement('a');
+                    tempLink.href = menuItem.href;
+
+                    // Se o pathname do link coincide com o pathname atual, adiciona a classe 'active'
+                    if (tempLink.pathname === currentPath) {
+                        menuItem.classList.add('active');
+                    }
+                });
+            });
+        </script>
+    </main>
+    <footer>
+        <div class="borda_baixo">
+            <div class="texto_baixo">
+                <li><a href="/Subpaginas/Fale_Conosco.html">Ficou com dúvida? Clique aqui</a></li>
+            </div>
+        </div>
+        <div class="final_pagina">
+            <div class="topico">
+                <h2>Comprar</h2>
+                <ul>
+                    <li><a href="">Carros Novos</a></li>
+                    <li><a href="">Motos Novos</a></li>
+                    <li><a href="">Carros Seminovos</a></li>
+                    <li><a href="">Motos Seminovas</a></li>
+                </ul>
+            </div>
+            <div class="topico">
+                <h2>Serviços</h2>
+                <ul>
+                    <li><a href="Subpaginas/Serviços.html">Compra</a></li>
+                    <li><a href="Subpaginas/Serviços.html">Vendas</a></li>
+                    <li><a href="Subpaginas/Serviços.html">Trocas</a></li>
+                    <li><a href="Subpaginas/Serviços.html">Financiamento</a></li>
+                </ul>
+            </div>
+            <div class="topico">
+                <h2>Ajuda</h2>
+                <ul>
+                    <li><a href="">Formas de Pagamento</a></li>
+                    <li><a href="Subpaginas/Fale_Conosco.html">Contatos</a></li>
+                    <li><a href="Subpaginas/Quem_Somos.html">Sobre nós</a></li>
+                    <li><a href="">Localização</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="ultimo_logo">
+            <div class="arrumando_itens">
+                <img src="/Imagens/logo.png" alt="logo_final">
+                <address>Rua Vereador Vilas Boas, n°808 , Porecatu - PR</address>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/fale_conosco.css">
+    <title>Canais de Comunicação</title>
+</head>
+
+<body>
+    <header class="Menu-principal">
+        <main>
+            <div class="header-1">
+                <div class="logo"><img src="/Imagens/Logo.png" /></div>
+                <div class="Redes-Sociais">
+                    <ul>
+                        <li><a href="https://www.facebook.com/garagen.porecatu" target="_blank"><img
+                                    src="/Imagens/facebook.1024x1018.png" height="25px"></a>
+                        </li>
+                        <li><a href="" target="_blank"><img src="/Imagens/whats.png" height="25px"></a></li>
+                        <li><a href="https://www.instagram.com/porecatu_garage/" target="_blank"><img
+                                    src="/Imagens/Insta.png" height="25px"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <div class="divider"></div>
+    <nav class="col-new menus-urls">
+        <div class="header-2">
+            <div class="menus">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Subpaginas/Quem_Somos.html">Quem
+                            Somos</a></li>
+                    <li><a href="/Subpaginas/Serviços.html">Serviços</a>
+                    </li>
+                    <li><a href="/Subpaginas/Dúvidas.html">Dúvidas</a>
+                    </li>
+                    <li><a href="/Subpaginas/Fale_Conosco.html">Fale
+                            Conosco</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <main>
+        <div class="buscas">
+            <input placeholder="Buscar" type="text" />
+        </div>
+        <div class="Contatos">
+
+            <h1><strong>Canais de atendimento</strong></h1>
+
+            <h3>Precisa falar com a Garagem Conheça nossos canais oficiais de atendimento.</h3>
+            <ol>
+                <li>
+                    <p><strong>Côpi, nosso chatbot</strong> - Faça login e acesse a área "ajuda" na sua garagem para
+                        falar com nosso time
+                        de atendimento pelo chatbot.</p>
+                </li>
+                <li>
+                    <p><strong>WhatsApp</strong> - Todos nossos canais oficiais são verificados. Nossos números são:
+                        (11) 94390-5088 e
+                        (11) 3181-7849</p>
+                </li>
+                <li>
+                    <p><strong>E-mail </strong>- Todos os e-mails da Garagem são sempre enviados por uma conta
+                        @Garagem.com.br</p>
+                </li>
+            </ol>
+            <div class="Frase_Vermelha">
+                <p><strong>Atenção! </strong>Não entramos em contato por nenhum canal solicitando o compartilhamento de
+                    senhas, códigos
+                    ou
+                    transferências bancárias. Fique atento e em caso de contatos suspeitos, acione nosso time.</p>
+            </div>
+        </div>
+        <div class="Feedback">
+            <h2>Este artigo foi útil?</h2>
+            <div class="Buttons">
+
+                <button class="botao" id="botao1" onclick="toggleActive('botao1')">Sim</button>
+                <button class="botao" id="botao2" onclick="toggleActive('botao2')">Não</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Obtém o caminho da URL atual
+                var currentPath = window.location.pathname;
+
+                // Obtém todos os links do menu
+                var menuItems = document.querySelectorAll('.menus a');
+
+                // Itera sobre os links do menu
+                menuItems.forEach(function (menuItem) {
+                    // Cria um link temporário para comparar apenas o pathname
+                    var tempLink = document.createElement('a');
+                    tempLink.href = menuItem.href;
+
+                    // Se o pathname do link coincide com o pathname atual, adiciona a classe 'active'
+                    if (tempLink.pathname === currentPath) {
+                        menuItem.classList.add('active');
+                    }
+                });
+            });
+            function toggleActive(id) {
+            var botao = document.getElementById(id);
+            var botoes = document.getElementsByClassName('botao');
+            for (var i = 0; i < botoes.length; i++) {
+                botoes[i].classList.remove('ativo');
+            }
+            botao.classList.add('ativo');
+        }
+        </script>
+</body>
+<footer>
+    <div class="ultimo_logo">
+        <div class="arrumando_itens">
+            <img src="/Imagens/logo.png" alt="logo_final">
+            <address>Rua Vereador Vilas Boas, n°808 , Porecatu - PR</address>
+        </div>
+    </div>
+</footer>
+
+</html>

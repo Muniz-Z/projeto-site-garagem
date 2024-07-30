@@ -1,0 +1,149 @@
+.menus-urls {
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 3px solid #d6d7db8e;
+}
+
+.menus ul li {
+    margin-top: 20px;
+    display: inline-block;
+    color: #8b8b8b;
+    margin-left: 50px;
+    height: 80px;
+}
+
+.menus ul li:hover {
+    border-bottom: 3px solid #E11138;
+}
+
+.menus ul li a:hover {
+    color: #E11138;
+
+}
+
+.menus ul li a {
+    font-family: 'MinhaFonte';
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    text-shadow: 10px, 10px, 5px rgb(31, 31, 31);
+    text-transform: uppercase;
+}
+
+.menus ul li a.active {
+    color: #E11138;
+    /* Exemplo de cor para o item ativo */
+    pointer-events: none;
+    /* Desativa o clique no item ativo */
+    cursor: default;
+    /* Altera o cursor para o padrão */
+}
+
+.menus {
+    text-align: center;
+    width: 93%;
+    float: left;
+}
+
+.buscas {
+    width: 80%;
+    PADDING-LEFT: 20%;
+    padding-top: 4%;
+
+}
+
+.buscas input {
+    background-image: url('/Imagens/Search.png');
+    background-repeat: no-repeat;
+    background-position: 98%;
+    height: 80px;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+    padding: 12px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    /* Transição suave para a cor da borda */
+    color: #8b8b8b;
+    /* Cor do texto dentro do input */
+    font-size: 18px;
+}
+
+.buscas input:focus {
+    font-family: "MinhaFonte";
+    border-color: #00bac6;
+    /* Cor da borda ao selecionar */
+}
+
+.buscas input::placeholder {
+    font-family: 'MinhaFonte';
+    color: #8b8b8b;
+    /* Cor do texto de placeholder */
+}
+
+.Contatos {
+    padding-top: 15%;
+    text-align: center;
+    font-family: "MinhaFonte";
+}
+
+.Contatos h1 {
+    padding-bottom: 2%;
+    color: #696977;
+    font-size: 3em;
+}
+
+.Contatos h3 {
+    font-size: 1.5em;
+    padding-bottom: 2%;
+    color: #727984;
+}
+
+.Contatos p {
+    font-size: 1.3em;
+    color: #696977;
+
+}
+
+.Frase_Vermelha p {
+    padding-top: 1.1%;
+    padding-bottom: 2%;
+    color: #CC0018;
+}
+
+.Feedback {
+    font-family: "MinhaFonte";
+    margin: auto;
+    text-align: center;
+}
+
+.Feedback h2 {
+    padding-bottom: 1.1%;
+    display: block;
+    color: #696977;
+}
+
+.Buttons  button {
+    font-family: "MinhaFonte";
+    cursor: pointer;
+    height: 55px;
+    width: 124px;
+    margin: 1.5% 0.5% 4% 1.5%;
+    border-radius: 3px;
+    border-color: #727984;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    text-shadow: .5px .5px .5px rgba(0, 0, 0, 0.548);
+}
+.Buttons  button:hover{
+    background-color: #F2123C;  
+}
+.botao:active, .botao.ativo {
+    background-color:  #F2123C;
+    color : white;
+    text-shadow: .5px .5px 1px rgba(0, 0, 0, 0.473);
+}

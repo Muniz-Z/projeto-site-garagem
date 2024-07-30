@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('/Fonte\ texto/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.imagem_apresentação {
+    padding-left: 15%;
+}
+
+.texto {
+    font-family: "MinhaFonte";
+    text-align: left;
+    font-size: 7em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.623);
+    color: #F3123C;
+}
+
+.container-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.foto_lado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.Imagem{
+  padding: 83px 73px 29px 73px;
+}
+
+.Imagem img {
+    max-width: 700px;
+    height: auto;
+}
+.limitar_largura{
+    padding-left: 12%;
+    text-align: center;
+}
+.limitar_largura p {
+    font-family: "MinhaFonte";
+    text-align: left;
+    max-width: 354px;
+    word-wrap: break-word;
+    padding-left: 23%;
+    padding-top: 10%;
+}

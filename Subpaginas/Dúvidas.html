@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/duvidas.css">
+    <title>Dúvidas</title>
+</head>
+
+<body>
+    <header class="Menu-principal">
+        <main>
+            <div class="header-1">
+                <div class="logo"><img src="/Imagens/Logo.png" /></div>
+                <div class="Redes-Sociais">
+                    <ul>
+                        <li><a href="https://www.facebook.com/garagen.porecatu" target="_blank"><img
+                                    src="/Imagens/facebook.1024x1018.png" height="25px"></a>
+                        </li>
+                        <li><a href="" target="_blank"><img src="/Imagens/whats.png" height="25px"></a></li>
+                        <li><a href="https://www.instagram.com/porecatu_garage/" target="_blank"><img
+                                    src="/Imagens/Insta.png" height="25px"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <div class="divider"></div>
+    <nav class="col-new menus-urls">
+        <div class="header-2">
+            <div class="menus">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Subpaginas/Quem_Somos.html">Quem
+                            Somos</a></li>
+                    <li><a href="/Subpaginas/Serviços.html">Serviços</a>
+                    </li>
+                    <li><a href="/Subpaginas/Dúvidas.html">Dúvidas</a>
+                    </li>
+                    <li><a href="/Subpaginas/Fale_Conosco.html">Fale
+                            Conosco</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <main>
+        <div class="buscas">
+            <input placeholder="Buscar" type="text" />
+        </div>
+        <div class="Pergunta">
+            <h1>Sobre o que é sua Dúvida??</h1>
+        </div>
+        <div class="container">
+            <div class="card">
+                <img src="/Imagens/Gol G4.jpeg" alt="Card 1">
+                <div class="links">
+                    <a href="link1.html">A garagem possui consórcio?</a>
+                    <a href="link2.html">Escolhendo seu veículo</a>
+                    <a href="link3.html">Tem Garantia?</a>
+                </div>
+                <div class="bottom-link">
+                    <a href="link11.html">Mais Artigos</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Card 2">
+                <div class="links">
+                    <a href="link4.html">Como entro em Contato?</a>
+                    <a href="link5.html">Como ir até o local de negociação?</a>
+                    <a href="link6.html">Tem como receber alerta de veículos do meu interesse?</a>
+                </div>
+                <div class="bottom-link">
+                    <a href="link11.html">Mais Artigos</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Card 3">
+                <div class="links">
+                    <a href="link7.html">Como trocar meu veículo?</a>
+                    <a href="link8.html">Onde levar meu veiculo pra negociação?</a>
+                    <a href="link9.html">Políticas de troca</a>
+                </div>
+                <div class="bottom-link">
+                    <a href="link11.html">Mais Artigos</a>
+                </div>
+            </div>
+        </div>
+        <div class="ListaFinal">
+            <h1>Dúvidas Frequentes</h1>
+        </div>
+        <div class="link-list">
+            <a href="link1.html" data-number="1">Link 1</a>
+            <a href="link2.html" data-number="6">Link 2</a>
+            <a href="link3.html" data-number="2">Link 3</a>
+            <a href="link4.html" data-number="7">Link 4</a>
+            <a href="link5.html" data-number="3">Link 5</a>
+            <a href="link6.html" data-number="8">Link 6</a>
+            <a href="link7.html" data-number="4">Link 7</a>
+            <a href="link8.html" data-number="9">Link 8</a>
+            <a href="link9.html" data-number="5">Link 9</a>
+            <a href="link10.html" data-number="10">Link 10</a>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtém o caminho da URL atual
+            var currentPath = window.location.pathname;
+            var normalizedPath = currentPath.replace(/^\//, '');
+
+            // Obtém todos os links do menu
+            var menuItems = document.querySelectorAll('.menus a');
+
+            // Itera sobre os links do menu
+            menuItems.forEach(function (menuItem) {
+                // Cria um link temporário para comparar apenas o pathname
+                var tempLink = document.createElement('a');
+                tempLink.href = menuItem.href;
+                // Normaliza o caminho do link removendo "/"
+                var linkPath = tempLink.pathname.replace(/^\//, '');
+                // Se o pathname do link coincide com o pathname atual, adiciona a classe 'active'
+                if (linkPath === normalizedPath) {
+                    menuItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <footer>
+        <div class="ultimo_logo">
+            <div class="arrumando_itens">
+                <img src="/Imagens/logo.png" alt="logo_final">
+                <address>Rua Vereador Vilas Boas, n°808 , Porecatu - PR</address>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECEDF2;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('/Fonte\ texto/Poppins-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul {
+    padding: 0px !important;
+}
+
+.Menu-principal {
+    margin: 20px 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #ECEDF2;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    /* Distribui os elementos uniformemente */
+    padding: 0 80px;
+    /* Espaçamento interno para não ficar colado nas bordas */
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #d6d7db83;
+    margin-top: -25px;
+}
+
+.main-container {
+    width: 980px;
+    /* Largura máxima do conteúdo */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+    display: flex;
+    justify-content: space-between;
+    /* Distribui os elementos uniformemente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.logo {
+    padding: 0px;
+}
+
+.Redes-Sociais {
+    position: absolute;
+    top: 15px;
+    right: 125px;
+    /* Ajuste conforme necessário */
+}
+
+.Redes-Sociais ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Redes-Sociais ul li {
+    display: inline-block;
+    margin-left: 20px;
+    /* Ajuste conforme necessário */
+    list-style: none;
+}
+
+.Redes-Sociais img {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.menu-urls {
+
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 3px solid #d6d7db8e;
+}
+
+.menu ul li {
+    margin-top: 20px;
+    display: inline-block;
+    color: #8b8b8b;
+    margin-left: 50px;
+    height: 80px;
+}
+
+.menu ul li:hover {
+    border-bottom: 3px solid #E11138;
+}
+
+.menu ul li a:hover {
+    color: #E11138;
+
+}
+
+.menu ul li a {
+    font-family: 'MinhaFonte';
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    text-shadow: 10px, 10px, 5px rgb(31, 31, 31);
+    text-transform: uppercase;
+}
+
+.menu ul li a.active {
+    color: #E11138;
+    /* Exemplo de cor para o item ativo */
+    pointer-events: none;
+    /* Desativa o clique no item ativo */
+    cursor: default;
+    /* Altera o cursor para o padrão */
+}
+
+.menu {
+    text-align: center;
+    width: 70%;
+    float: left;
+}
+
+.busca {
+    width: 30%;
+    float: right;
+}
+
+.busca input {
+    background-image: url('/Imagens/Search.png');
+    background-repeat: no-repeat;
+    background-position: 96%;
+    height: 50px;
+    margin-top: 25px;
+    padding: 12px;
+    width: 300px;
+    border: 1px solid #d6d6d6;
+    transition: border-color 0.3s ease;
+    /* Transição suave para a cor da borda */
+    color: #8b8b8b;
+    /* Cor do texto dentro do input */
+    font-size: 18px;
+}
+
+.busca input:focus {
+    font-family: "MinhaFonte";
+    border-color: #00bac6;
+    /* Cor da borda ao selecionar */
+}
+
+.busca input::placeholder {
+    font-family: 'MinhaFonte';
+    color: #8b8b8b;
+    /* Cor do texto de placeholder */
+}
+.conteiner-1{
+    box-shadow: 2px 2px 2px #d6d7db86;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 50%;
+    margin-left: 25%;
+    /* Adiciona margem superior para mover o slideshow para baixo */
+}
+
+.slide {
+    display: flex;
+}
+
+.slide img {
+    height: auto;
+}
+
+.text {
+    font-family: "MinhaFonte";
+    color: #f2f2f2;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo semitransparente */
+    padding: 10px;
+    width: 80%;
+    /* Ajuste conforme necessário */
+    border-radius: 5px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.507);
+}
+
+.arrow {
+    width: 30px;
+    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 4px;
+    margin-top: auto;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 1000;
+    background: none;
+    /* Remove fundo */
+    border: none;
+    /* Remove borda */
+    background-color: #000;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover,
+.next:hover {
+    opacity: 0.7;
+    /* Ajusta a opacidade ao passar o mouse */
+}
+
+/* Animação fade */
+.fade {
+    animation-name: fade;
+    animation-duration: 3.0s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.container-2 {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 150px;
+    gap: 60px;
+    /* Espaço entre a barra de filtros e a grade de produtos */
+}
+
+.filter-bar {
+    width: 18%;
+    padding: 20px;
+    background-color: #E11138;
+    border-radius: 5px;
+    margin-right: 20px;
+    /* Espaço entre a barra de filtros e a grade de produtos */
+    margin-left: -300px;
+    /* Remove a margem esquerda */
+}
+
+.filter-group {
+    font-family: "MinhaFonte";
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-group select,
+.filter-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding-left: 40px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 45px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h2 {
+    font-family: "MinhaFonte";
+    font-size: 1em;
+    margin: 10px 0;
+    /* Ajustei a margem do título */
+}
+
+.product-card p {
+    font-family: "MinhaFonte";
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-card .button {
+    font-family: "MinhaFonte";
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2E2D37;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-card .button:hover {
+    background-color: #515155;
+}
+
+.borda_baixo {
+    width: 100%;
+    margin-top: 60px;
+    padding: 25px;
+    background-color: #E11138;
+    border-top: black;
+    border-bottom: black;
+}
+
+.texto_baixo {
+    text-align: center;
+    list-style-type: none;
+}
+
+.texto_baixo li a {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+    font-family: "MinhaFonte";
+    color: #FBFBFF;
+    text-decoration: none;
+}
+
+.texto_baixo li a:hover {
+    text-decoration: underline;
+}
+
+.final_pagina {
+    background-color: #2E2D37;
+    padding: 45px;
+    width: 100%;
+}
+
+.topico {
+    margin-top: -82px;
+    display: inline-block;
+    padding: 100px;
+    margin-left: 150px;
+
+}
+
+.topico h2 {
+    color: #FFFFFF;
+    padding: 10px;
+    text-shadow: 2px 2px 0 #000,
+        -2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px -2px 0 #000,
+        2px 0 0 #000,
+        -2px 0 0 #000,
+        0 2px 0 #000,
+        0 -2px 0 #000;
+    ;
+    ;
+
+}
+
+.topico ul li {
+    padding: 5px;
+}
+
+.topico ul li a {
+    font-family: "MinhaFonte";
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+}
+
+.topico ul li a:hover {
+    text-decoration: underline;
+}
+
+.ultimo_logo {
+    background-color: #E11138;
+    padding: 5px;
+    width: 100%;
+    align-items: center;
+}
+
+.arrumando_itens {
+    margin: 30px 700px 0 720px;
+}
+
+.ultimo_logo img {
+    align-items: center;
+    padding: 0 95px;
+    height: flex;
+}
+
+.ultimo_logo address {
+    font-family: "MinhaFonte";
+    color: white;
+    text-align: center;
+    height: 80px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+    padding-top: 7px;
+}
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Imagens/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/quem_somos.css">
+    <title>Quem Somos</title>
+</head>
+
+
+<body>
+    <header class="Menu-principal">
+        <main>
+            <div class="header-1">
+                <div class="logo"><img src="/Imagens/Logo.png" /></div>
+                <div class="Redes-Sociais">
+                    <ul>
+                        <li><a href="https://www.facebook.com/garagen.porecatu" target="_blank"><img
+                                    src="/Imagens/facebook.1024x1018.png" height="25px"></a>
+                        </li>
+                        <li><a href="" target="_blank"><img src="/Imagens/whats.png" height="25px"></a></li>
+                        <li><a href="https://www.instagram.com/porecatu_garage/" target="_blank"><img
+                                    src="/Imagens/Insta.png" height="25px"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <div class="divider"></div>
+    <main class="col-100 menu-urls">
+        <div class="header-2">
+            <div class="menu">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Subpaginas/Quem_Somos.html">Quem
+                            Somos</a></li>
+                    <li><a href="/Subpaginas/Serviços.html">Serviços</a>
+                    </li>
+                    <li><a href="/Subpaginas/Dúvidas.html">Dúvidas</a>
+                    </li>
+                    <li><a href="/Subpaginas/Fale_Conosco.html">Fale
+                            Conosco</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="busca">
+            <input placeholder="Buscar" type="text" />
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtém o caminho da URL atual
+            var currentPath = window.location.pathname;
+            var normalizedPath = currentPath.replace(/^\//, '');
+
+            // Obtém todos os links do menu
+            var menuItems = document.querySelectorAll('.menu a');
+
+            // Itera sobre os links do menu
+            menuItems.forEach(function (menuItem) {
+                // Cria um link temporário para comparar apenas o pathname
+                var tempLink = document.createElement('a');
+                tempLink.href = menuItem.href;
+                // Normaliza o caminho do link removendo "/"
+                var linkPath = tempLink.pathname.replace(/^\//, '');
+                // Se o pathname do link coincide com o pathname atual, adiciona a classe 'active'
+                if (linkPath === normalizedPath) {
+                    menuItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <main class="container-4">
+        <div class="foto_lado">
+            <div class="limitar_largura">
+                <h1 class="texto">Sobre nós</h1>
+                <p>Há mais de 20 anos na estrada, fomos a primeira startup brasileira a inovar na forma de comprar e vender carros e motos. Líderes de mercado e especialistas no segmento, temos como combustível a paixão pela cultura automotiva e a vontade de oferecer sempre a melhor e mais segura experiência de compra e venda online</p>
+            </div>
+            <div class="Imagem"><img src="/Imagens/Quem Somos_1.jpeg" alt=""></div>
+        </div>
+
+        <div class="foto_lado">
+            <div class="limitar_largura">
+                <h1 class="texto">Ideais</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam incidunt vero aperiam veniam asperiores tenetur nostrum, sed sit nisi laboriosam necessitatibus dolor quod accusamus facere, culpa quisquam eligendi recusandae commodi.</p>
+            </div>
+            <div class="Imagem"><img src="/Imagens/Quem Somos_1.jpeg" alt=""></div>
+        </div>
+    </main>
+    <div class="borda_baixo">
+        <div class="texto_baixo">
+            <li><a href="/Subpaginas/Fale_Conosco.html">Ficou com dúvida? Clique aqui</a></li>
+        </div>
+    </div>
+    <div class="final_pagina">
+        <div class="topico">
+            <h2>Comprar</h2>
+            <ul>
+                <li><a href="">Carros Novos</a></li>
+                <li><a href="">Motos Novos</a></li>
+                <li><a href="">Carros Seminovos</a></li>
+                <li><a href="">Motos Seminovas</a></li>
+            </ul>
+        </div>
+        <div class="topico">
+            <h2>Serviços</h2>
+            <ul>
+                <li><a href="Subpaginas/Serviços.html">Compra</a></li>
+                <li><a href="Subpaginas/Serviços.html">Vendas</a></li>
+                <li><a href="Subpaginas/Serviços.html">Trocas</a></li>
+                <li><a href="Subpaginas/Serviços.html">Financiamento</a></li>
+            </ul>
+        </div>
+        <div class="topico">
+            <h2>Ajuda</h2>
+            <ul>
+                <li><a href="">Formas de Pagamento</a></li>
+                <li><a href="Subpaginas/Fale_Conosco.html">Contatos</a></li>
+                <li><a href="Subpaginas/Quem_Somos.html">Sobre nós</a></li>
+                <li><a href="">Localização</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+    <div class="ultimo_logo">
+        <div class="arrumando_itens">
+            <img src="/Imagens/logo.png" alt="logo_final">
+            <address>Rua Vereador Vilas Boas, n°808 , Porecatu - PR</address>
+        </div>
+    </div>
+
+</body>
+
+</html>
