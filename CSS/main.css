@@ -55,11 +55,6 @@ ul {
     align-items: center;
     /* Centraliza verticalmente */
 }
-
-.logo {
-    padding: 0px;
-}
-
 .Redes-Sociais {
     position: absolute;
     top: 15px;
@@ -182,6 +177,8 @@ ul {
 
 .slide img {
     height: auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.548);
 }
 
 .text {

@@ -208,4 +208,5 @@ width: 100%;
 
 .link-list a:hover {
     text-decoration: underline; /* Sublinha o texto ao passar o mouse */
+    color: #E11138;
 }

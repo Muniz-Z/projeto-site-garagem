@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             nome: 'Produto 1 Carro',
-            imagem: 'Imagens/2.png',
+            imagem: 'Imagens/Agile.jpeg',
             descricao: 'Descrição do produto 1.',
             categoria: 'carros',
             marca: 'Chevrolet',
@@ -41,14 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
             valor: 320000
         },
         {
-            nome: 'Produto 1 Carro',
-            imagem: 'Imagens/2.png',
-            descricao: 'Descrição do produto 1.',
+            nome: 'New Beetle (Vermelho)',
+            imagem: 'Imagens/NewBatlee.jpeg',
+            descricao: '45.000,00',
             categoria: 'carros',
-            marca: 'Lamborghini',
-            ano: 2022,
+            marca: 'Chevrolet',
+            ano: 2009,
             completo: true,
-            valor: 500000
+            valor: 4500000
         },
         {
             nome: 'Produto 2 Moto',
