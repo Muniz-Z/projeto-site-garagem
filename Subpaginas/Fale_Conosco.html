@@ -89,25 +89,6 @@
             </div>
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Obtém o caminho da URL atual
-                var currentPath = window.location.pathname;
-
-                // Obtém todos os links do menu
-                var menuItems = document.querySelectorAll('.menus a');
-
-                // Itera sobre os links do menu
-                menuItems.forEach(function (menuItem) {
-                    // Cria um link temporário para comparar apenas o pathname
-                    var tempLink = document.createElement('a');
-                    tempLink.href = menuItem.href;
-
-                    // Se o pathname do link coincide com o pathname atual, adiciona a classe 'active'
-                    if (tempLink.pathname === currentPath) {
-                        menuItem.classList.add('active');
-                    }
-                });
-            });
             function toggleActive(id) {
             var botao = document.getElementById(id);
             var botoes = document.getElementsByClassName('botao');
@@ -117,14 +98,16 @@
             botao.classList.add('ativo');
         }
         </script>
+        <footer>
+            <div class="ultimo_logo">
+                <div class="arrumando_itens">
+                    <img src="/Imagens/logo.png" alt="logo_final">
+                    <address>Rua Vereador Vilas Boas, n°808 , Porecatu - PR</address>
+                </div>
+            </div>
+        </footer>
+        <script src="/JS/main.js"></script>
 </body>
-<footer>
-    <div class="ultimo_logo">
-        <div class="arrumando_itens">
-            <img src="/Imagens/logo.png" alt="logo_final">
-            <address>Rua Vereador Vilas Boas, n°808 , Porecatu - PR</address>
-        </div>
-    </div>
-</footer>
+
 
 </html>

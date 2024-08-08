@@ -20,74 +20,73 @@ body {
     font-style: normal;
 }
 
-ul {
-    padding: 0px !important;
+header {
+    position: relative;
+    /* Para que o ::after seja posicionado em relação ao header */
 }
 
-.Menu-principal {
-    margin: 20px 0;
-    z-index: 1000;
-    width: 100%;
-    background-color: #ECEDF2;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    /* Distribui os elementos uniformemente */
-    padding: 0 80px;
-    /* Espaçamento interno para não ficar colado nas bordas */
-}
-
-.divider {
-    width: 100%;
-    height: 1px;
-    background-color: #d6d7db83;
-    margin-top: -25px;
-}
-
-.main-container {
-    width: 980px;
-    /* Largura máxima do conteúdo */
-    margin: 0 auto;
-    /* Centraliza o conteúdo */
-    display: flex;
-    justify-content: space-between;
-    /* Distribui os elementos uniformemente */
-    align-items: center;
-    /* Centraliza verticalmente */
-}
-.Redes-Sociais {
+header::after {
+    content: "";
+    display: block;
     position: absolute;
-    top: 15px;
-    right: 125px;
-    /* Ajuste conforme necessário */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Espessura da linha */
+    background-color: #d6d7db;
+    /* Cor da linha */
+    background-image: linear-gradient(90deg, #71F79F 0%, #13d69f 92.32%);
+    /* Opcional: cor gradiente */
+    z-index: 1;
+    /* Garante que a linha fique acima do conteúdo abaixo */
+}
+
+.header-1 {
+    display: flex;
+    justify-content: space-between;
+    /* Espaço entre os elementos (logo à esquerda, redes sociais à direita) */
+    align-items: center;
+    /* Alinha verticalmente os itens ao centro */
+    padding: 35px 100px;
+    /* Ajuste de espaçamento interno */
+    background-color: #ECEDF2;
+    /* Cor de fundo opcional */
+}
+
+.logo img {
+    max-height: 80px;
+    /* Ajuste a altura máxima da logo, se necessário */
+    width: 190px;
+    height: auto;
 }
 
 .Redes-Sociais ul {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .Redes-Sociais ul li {
-    display: inline-block;
     margin-left: 20px;
-    /* Ajuste conforme necessário */
-    list-style: none;
+    /* Espaçamento entre os ícones */
 }
 
-.Redes-Sociais img {
-    width: 30px;
-    height: auto;
-    margin-top: 10px;
+.Redes-Sociais ul li a img {
+    height: 35px;
+    width: auto;
 }
 
-.menu-urls {
 
+.menus-urls {
+    width: 100%;
     height: 100px;
     background-color: #ffffff;
     border-bottom: 3px solid #d6d7db8e;
 }
 
-.menu ul li {
+.menus ul li {
     margin-top: 20px;
     display: inline-block;
     color: #8b8b8b;
@@ -95,25 +94,25 @@ ul {
     height: 80px;
 }
 
-.menu ul li:hover {
+.menus ul li:hover {
     border-bottom: 3px solid #E11138;
 }
 
-.menu ul li a:hover {
+.menus ul li a:hover {
     color: #E11138;
 
 }
 
-.menu ul li a {
+.menus ul li a {
     font-family: 'MinhaFonte';
     color: black;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.1em;
     text-shadow: 10px, 10px, 5px rgb(31, 31, 31);
     text-transform: uppercase;
 }
 
-.menu ul li a.active {
+.menus ul li a.active {
     color: #E11138;
     /* Exemplo de cor para o item ativo */
     pointer-events: none;
@@ -122,26 +121,79 @@ ul {
     /* Altera o cursor para o padrão */
 }
 
-.menu {
+.menus {
     text-align: center;
-    width: 70%;
+    width: 93%;
     float: left;
 }
 
+@media (max-width: 818px) {
+    .menus {
+        flex-direction: inherit;
+        align-items: center;
+        /* Centraliza os itens verticalmente */
+    }
+
+    .menus ul {
+        flex-direction: column;
+        /* Coloca os itens do menu em coluna em telas menores */
+        align-items: center;
+        /* Centraliza os itens do menu */
+        padding-top: 10px;
+        /* Remove o padding da lista */
+        padding-left: 11px;
+    }
+
+    .menus ul li {
+        margin: 10px 10px;
+        /* Adiciona espaço entre os itens do menu em telas menores */
+    }
+}
+
+@media (max-width: 620px) {
+    .menus {
+        flex-direction: inherit;
+        align-items: center;
+        /* Centraliza os itens verticalmente */
+    }
+
+    .menus ul {
+        flex-direction: column;
+        /* Coloca os itens do menu em coluna em telas menores */
+        align-items: center;
+        /* Centraliza os itens do menu */
+        padding-top: 10px;
+        /* Remove o padding da lista */
+        padding-left: 11px;
+    }
+
+    .menus ul li {
+        margin: 10px 10px;
+        /* Adiciona espaço entre os itens do menu em telas menores */
+    }
+
+    .menus ul li a {
+        font-size: 0.6em;
+    }
+}
+
 .busca {
-    width: 30%;
-    float: right;
+    width: 80%;
+    PADDING-LEFT: 20%;
+    padding-bottom: 30px;
 }
 
 .busca input {
     background-image: url('/Imagens/Search.png');
     background-repeat: no-repeat;
-    background-position: 96%;
-    height: 50px;
+    background-position: 98%;
+    height: 80px;
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2);
     margin-top: 25px;
     padding: 12px;
-    width: 300px;
-    border: 1px solid #d6d6d6;
+    width: 100%;
     transition: border-color 0.3s ease;
     /* Transição suave para a cor da borda */
     color: #8b8b8b;
@@ -160,7 +212,8 @@ ul {
     color: #8b8b8b;
     /* Cor do texto de placeholder */
 }
-.conteiner-1{
+
+.conteiner-1 {
     box-shadow: 2px 2px 2px #d6d7db86;
 }
 
@@ -439,4 +492,3 @@ ul {
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
     padding-top: 7px;
 }
-

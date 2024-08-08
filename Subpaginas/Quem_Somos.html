@@ -29,10 +29,9 @@
             </div>
         </main>
     </header>
-    <div class="divider"></div>
-    <main class="col-100 menu-urls">
+    <nav class="col-100 menus-urls">
         <div class="header-2">
-            <div class="menu">
+            <div class="menus">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/Subpaginas/Quem_Somos.html">Quem
@@ -46,36 +45,12 @@
 
                 </ul>
             </div>
-
         </div>
+    </nav>
+    <main class="container-4">
         <div class="busca">
             <input placeholder="Buscar" type="text" />
         </div>
-    </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Obtém o caminho da URL atual
-            var currentPath = window.location.pathname;
-            var normalizedPath = currentPath.replace(/^\//, '');
-
-            // Obtém todos os links do menu
-            var menuItems = document.querySelectorAll('.menu a');
-
-            // Itera sobre os links do menu
-            menuItems.forEach(function (menuItem) {
-                // Cria um link temporário para comparar apenas o pathname
-                var tempLink = document.createElement('a');
-                tempLink.href = menuItem.href;
-                // Normaliza o caminho do link removendo "/"
-                var linkPath = tempLink.pathname.replace(/^\//, '');
-                // Se o pathname do link coincide com o pathname atual, adiciona a classe 'active'
-                if (linkPath === normalizedPath) {
-                    menuItem.classList.add('active');
-                }
-            });
-        });
-    </script>
-    <main class="container-4">
         <div class="foto_lado">
             <div class="limitar_largura">
                 <h1 class="texto">Sobre nós</h1>
@@ -91,7 +66,7 @@
             </div>
             <div class="Imagem"><img src="/Imagens/Quem Somos_1.jpeg" alt="Segunda"></div>
         </div>
-    </main>
+    
     <div class="borda_baixo">
         <div class="texto_baixo">
             <li><a href="/Subpaginas/Fale_Conosco.html">Ficou com dúvida? Clique aqui</a></li>
@@ -126,7 +101,7 @@
             </ul>
         </div>
     </div>
-
+    </main>
     <footer>
     <div class="ultimo_logo">
         <div class="arrumando_itens">
@@ -134,7 +109,7 @@
             <address>Rua Vereador Vilas Boas, n°808 , Porecatu - PR</address>
         </div>
     </footer>
-
+<script src="/JS/main.js"></script>
 </body>
 
 </html>

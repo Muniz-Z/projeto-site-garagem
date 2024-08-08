@@ -26,10 +26,9 @@
             </div>
         </div>
     </header>
-    <div class="divider"></div>
-    <nav class="col-100 menu-urls">
+    <nav class="col-100 menus-urls">
         <div class="header-2">
-            <div class="menu">
+            <div class="menus">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/Subpaginas/Quem_Somos.html">Quem
@@ -44,11 +43,11 @@
                 </ul>
             </div>
         </div>
+    </nav>
+    <main>
         <div class="busca">
             <input placeholder="Buscar" type="text" />
         </div>
-    </nav>
-    <main>
         <div class="Serviços_gerais">
             <h1>Serviços</h1>
             <li>
@@ -77,27 +76,6 @@
             </li>
         </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Obtém o caminho da URL atual
-                var currentPath = window.location.pathname;
-
-                // Obtém todos os links do menu
-                var menuItems = document.querySelectorAll('.menu a');
-
-                // Itera sobre os links do menu
-                menuItems.forEach(function (menuItem) {
-                    // Cria um link temporário para comparar apenas o pathname
-                    var tempLink = document.createElement('a');
-                    tempLink.href = menuItem.href;
-
-                    // Se o pathname do link coincide com o pathname atual, adiciona a classe 'active'
-                    if (tempLink.pathname === currentPath) {
-                        menuItem.classList.add('active');
-                    }
-                });
-            });
-        </script>
     </main>
     <footer>
         <div class="borda_baixo">
@@ -142,6 +120,7 @@
             </div>
         </div>
     </footer>
+    <script src="/JS/main.js"></script>
 </body>
 
 </html>
